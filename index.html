@@ -1,0 +1,103 @@
+<html>
+ <head> 
+  <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=yes"> 
+  <title>ZH工作室</title> 
+  <script src="js/jq.js"></script> 
+ </head> 
+ <body id="v1" bgcolor="pink"> 
+  <img id="v13" src="logo.jpg" width="1000" height="300" alt="图片"> 
+  <h1 id="v2">=====ZH工作室======</h1> 
+  <p id="v3">Welcome to the ZH工作室</p> 
+  <h2 id="v4">未来发展的工作室</h2> 
+  <h2 id="v5"> <img id="v6" src="ZHGZS.jpg" width="1000" height="400"></h2>
+  <img src="qq.jpg" width="1000" height="400" alt="图片" id="v9"> 
+  <video src="AI.mp4" width="1000" height="400" controls="controls" id="v10">
+  </video>
+  <audio src="day.mp3" width="100%" controls="" id="v8">
+  </audio>
+  <a href="http://15750896157.github.io/">
+  <button id="v11">刷新网页</button>
+  </a>
+  <header id="v12">
+    1页 
+  </header> 
+  <a href="https://wap.mail.qq.com/home/index?sid=zUlQMIwVTXUu6TBDAHNMVgAA#/">
+  <img id="v15" src="okay.jpg" width="350" height="300"> 
+  </a>
+  <p id="v14">此网站为alpha1.0内测版本,暂时没有任何商业用途。（往后有商务合作，招聘画师、VR或游戏领域技术人员可加Q</p> 
+  <input id="v16" type="text" placeholder="输入内容" class="serch"> 
+  <div id="v17" class="pic"> 
+   <a id="v18" href="#"><img id="v19" src="搜索.jpg" width="20" height="20" "="" alt="输入内容"></a> 
+  </div> 
+  <meta id="v20" charset="UTF-8"> 
+  <title id="v21">ZH</title> 
+  <style id="v22">
+        *{
+            margin: 0 auto;
+            background-color: pink;
+        }
+        input{
+            background: #c9ccc9;
+            border: 1px #c0d8ef solid;
+            border-radius: 2px;
+            margin-left: 15px;
+        }
+
+        button{
+            margin-top: 5px;
+            background: #c9ccc9;
+            border: 1px #cccccc solid;
+            border-radius: 2px;
+        }
+    </style> 
+  <script src="jquery.1.12.4.js"></script> 
+  <div id="v23" style="margin-left: 615px">
+    搜索 
+  </div> 
+  <div style="width: 300px;height: 300px;border: 1px green solid;" id="div"> 
+  </div> 
+  <div id="v24" style="width: 300px;">
+    输入框 
+   <input type="text" id="writediv" size="30px"> 
+  </div> 
+  <button style="width: 50px;display: block" id="write">记录</button> 
+  <br id="v25"> 
+  <br id="v26"> 
+  <div id="v27" style="width: 300px;">
+    搜索框 
+   <input type="text" id="searchdiv" size="30px"> 
+  </div> 
+  <button style="width: 50px;display: block" id="search">搜索</button>&gt; 
+  <script>
+             $("#write").click(function(){
+                 var b = $("#div").html();
+                 var a = $("#writediv").val();
+                 var pattern = new RegExp("滚");
+                 var result = a.match(pattern);
+                 if(result){
+                      alert("含有特殊字符");
+                 }
+                 else if(a==""){
+                     alert("您输入的文字为空！");
+                 }
+                 else if(b.indexOf(a)>=0){
+                     alert("您记录的内容已存在");
+                 }else{
+                     console.log(b.length);
+                     if(b.length>=1){
+                         $("li:�rst-child").before("<li 
+ style='list-style: none'>"+a+"</li>");
+                     }
+                     else{
+                         $("#div").append("<li style='list-
+ style: none'>"+a+"</li>");
+                     }
+                 }
+             })
+             $("#search").click(function(){var b = $("#div").html();var a = $("#searchdiv").val();var pattern = new RegExp("滚");var result = a.match(pattern);if(result){alert("含有特殊字符");}
+                 else if(a==""){alert("您输入的文字为空");}
+                 else if(b.indexOf(a)>=0){alert("搜索到相关内容");}
+                 else{alert("未搜索到相关内容");}})
+         </script>  
+ </body>
+</html>
