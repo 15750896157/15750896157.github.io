@@ -67,38 +67,7 @@
     搜索框 
    <input type="text" id="searchdiv" size="30px"> 
   </div> 
-  <button style="width: 50px;display: block" id="search">搜索</button>&gt; 
-  <script>
-             $("#write").click(function(){
-                 var b = $("#div").html();
-                 var a = $("#writediv").val();
-                 var pattern = new RegExp("滚");
-                 var result = a.match(pattern);
-                 if(result){
-                      webtools-static-lert("含有特殊字符");
-                 }
-                 else if(a==""){
-                     webtools-static-lert("您输入的文字为空！");
-                 }
-                 else if(b.indexOf(a)>=0){
-                     webtools-static-lert("您记录的内容已存在");
-                 }else{
-                     console.log(b.length);
-                     if(b.length>=1){
-                         $("li:�rst-child").before("<li 
- style='list-style: none'>"+a+"</li>");
-                     }
-                     else{
-                         $("#div").append("<li style='list-
- style: none'>"+a+"</li>");
-                     }
-                 }
-             })
-             $("#search").click(function(){var b = $("#div").html();var a = $("#searchdiv").val();var pattern = new RegExp("滚");var result = a.match(pattern);if(result){webtools-static-lert("含有特殊字符");}
-                 else if(a==""){webtools-static-lert("您输入的文字为空");}
-                 else if(b.indexOf(a)>=0){webtools-static-lert("搜索到相关内容");}
-                 else{webtools-static-lert("未搜索到相关内容");}})
-         </script> 
+  <button style="width: 50px;display: block" id="search">搜索</button>&gt;
   <ol id="v36"> 
   </ol>
  </body>
